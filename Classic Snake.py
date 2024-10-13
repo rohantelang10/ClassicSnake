@@ -1,6 +1,6 @@
 import turtle
 import time
-import random
+import secrets
 
 delay = 0.2
 speed_increaser = 10
@@ -116,8 +116,8 @@ while True:
         pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
 
     if head.distance(food) < 20:
-        x = random.randint(-290, 290)
-        y = random.randint(-290, 290)
+        x = secrets.SystemRandom().randint(-290, 290)
+        y = secrets.SystemRandom().randint(-290, 290)
         food.goto(x, y)
 
         new_segment = turtle.Turtle()
