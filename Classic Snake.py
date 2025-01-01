@@ -10,7 +10,7 @@ score = 0
 high_score = 0
 
 file= open("high_score.txt",'r')
-high_score=int(file.readline())
+high_score=int(file.readline(5_000_000))
 
 file.close()
 
